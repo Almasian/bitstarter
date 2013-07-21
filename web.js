@@ -6,7 +6,7 @@ buf = new buffer(128);
 
 app.get('/', function(request, response) {
   //response.send('Hello World 2!');
-  buf = fs.readFileSync(./bitstarter/index.html);
+  buf = fs.readFileSync('./bitstarter/index.html');
   response.send(buf.toString('utf8'));
 });
 
