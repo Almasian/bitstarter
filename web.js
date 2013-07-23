@@ -7,7 +7,7 @@ buf = new Buffer(128);
 app.get('/', function(request, response) {
   //response.send('Hello World 2');
   //buf = fs.readFileSync('/home/ubuntu/bitstarter/index.html');
-  buf = fs.readFileSync(path.join(__dirname,'..bitstarter') + 'index.html');
+  buf = fs.readFileSync('../bistarter/index.html');
   response.send(buf.toString('utf8'));
 });
 
