@@ -6,7 +6,8 @@ buf = new Buffer(128);
 
 app.get('/', function(request, response) {
   //response.send('Hello World 2');
-  buf = fs.readFileSync('/home/ubuntu/bitstarter/index.html');
+  //buf = fs.readFileSync('/home/ubuntu/bitstarter/index.html');
+  buf = fs.readFileSync(path.join(__dirname,'..bitstarter') + 'index.html');
   response.send(buf.toString('utf8'));
 });
 
@@ -14,3 +15,4 @@ var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
+
